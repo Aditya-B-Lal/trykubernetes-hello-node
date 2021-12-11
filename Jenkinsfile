@@ -20,11 +20,10 @@ pipeline {
                 script {
                      
                     sh 'docker login -u 9526584898 -p Aditya123*'
-                    sh 'docker tag latest 9526584898/postgres:latest'
-                    sh 'docker push 9526584898/postgres'
+                    sh 'docker tag postgres 9526584898/latest:postgres'
+                    sh 'docker push 9526584898/latest:postgres'
                 }
             }
         }
     }
 }
- 
