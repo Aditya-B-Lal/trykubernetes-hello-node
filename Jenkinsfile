@@ -20,7 +20,7 @@ pipeline {
                 script {
                      
                     sh 'docker login -u 9526584898 -p Aditya123*'
-                    sh 'docker tag posttag 9526584898/postgres:posttag'
+                    sh 'docker tag latest 9526584898/postgres:latest'
                     sh 'docker push 9526584898/postgres'
                 }
             }
