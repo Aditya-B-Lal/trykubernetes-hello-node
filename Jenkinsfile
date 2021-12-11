@@ -10,21 +10,21 @@ pipeline {
          stage('Build Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t ubuntu .'
+                  sh 'docker pull postgres'
                 }
             }
         }
         
-        stage('Deploy Docker Image') {
-            steps {
-                script {
+//         stage('Deploy Docker Image') {
+//             steps {
+//                 script {
                      
-                    sh 'docker login -u 9526584898 -p Aditya123*'
-                    //sh 'docker tag kubernetestry 9526584898/minikube:kubernetestry'
-                    sh 'docker push ubuntu'
-                }
-            }
-        }
+//                     sh 'docker login -u 9526584898 -p Aditya123*'
+//                     //sh 'docker tag kubernetestry 9526584898/minikube:kubernetestry'
+//                     sh 'docker push ubuntu'
+//                 }
+//             }
+//         }
     }
 }
  
