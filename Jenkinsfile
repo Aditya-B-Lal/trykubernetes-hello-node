@@ -10,7 +10,7 @@ pipeline {
          stage('Build Docker Image') {
             steps {
                 script {
-                  sh 'docker build -t kubernetestry .'
+                  sh 'docker build -t ubuntu .'
                 }
             }
         }
@@ -20,8 +20,8 @@ pipeline {
                 script {
                      
                     sh 'docker login -u 9526584898 -p Aditya123*'
-                    sh 'docker tag kubernetestry 9526584898/minikube:kubernetestry'
-                    sh 'docker push 9526584898/minikube:kubernetestry'
+                    //sh 'docker tag kubernetestry 9526584898/minikube:kubernetestry'
+                    sh 'docker push ubuntu'
                 }
             }
         }
