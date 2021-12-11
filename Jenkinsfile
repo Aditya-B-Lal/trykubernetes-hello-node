@@ -20,8 +20,8 @@ pipeline {
                 script {
                      
                     sh 'docker login -u 9526584898 -p Aditya123*'
-                    //sh 'docker tag kubernetestry 9526584898/minikube:kubernetestry'
-                    sh 'docker push postgres'
+                    sh 'docker tag postgres 9526584898/postgres:postgres'
+                    sh 'docker push 9526584898/postgres'
                 }
             }
         }
